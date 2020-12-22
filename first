@@ -1,0 +1,23 @@
+#Write a Python Program to implement your own myreduce() function which works exactly
+#like Python's built-in function reduce()
+lst=[]
+
+n=int(input("enter the no of element: "))
+for i in range(0,n):
+    ele=int(input())
+    lst.append(ele)
+
+def myadd(a,b):
+    return a+b
+    
+def multi1(a,b):
+    return a*b
+
+def myreduce(myadd,lst):
+    x = int(input("enter the initial value for the first variable"))
+    for j in lst:
+        x = (multi1(x,j))
+        j=j+1
+    print(x)
+
+myreduce(myadd,lst)
